@@ -1,0 +1,70 @@
+import java.util.*;
+
+public class Customer extends Person  {
+	
+	Scanner keyboard= new Scanner(System.in);
+	protected static int customerCount=0;
+	private int customerID= customerCount+0000000;
+	private double balance;
+	private int numItems;
+	private String itemName;
+
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String custName) {
+		name= custName;
+	}
+
+	@Override
+	public String getAddress() {
+		return address;
+	}
+
+	@Override
+	public void setAddress(String custAddress) {
+		address= custAddress;
+	}
+
+	@Override
+	public int getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	@Override
+	public void setPhoneNumber(int custPhone) {
+		phoneNumber=custPhone;
+	}
+	
+	public int getCustID() 
+	{
+		return customerID;
+	}
+	
+	public double getBalance() 
+	{
+		return balance;
+	}
+	
+	public void setBalance(double custBalance) 
+	{
+		balance=custBalance;
+	}
+	
+	public void purchase() 
+	{
+		System.out.println("How many items would you like to purchase?");
+		numItems= keyboard.nextInt();
+		System.out.println("What item would you like to buy?");
+		itemName= keyboard.next();
+		
+		for(String newProduct: ElectronicsOnlineStore.listOfItems.keySet()) {}
+	
+	}
+	
+}
+
+
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;controllers.UpdateBookServlet.java&apos; to &apos;UpdateProductServlet.java&apos;&#x0A;- Original project: &apos;Book_DB_Example&apos;&#x0A;- Original element: &apos;controllers.UpdateBookServlet.java&apos;&#x0A;- Renamed element: &apos;controllers.UpdateProductServlet.java&apos;" description="Rename compilation unit &apos;UpdateBookServlet.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;controllers{UpdateBookServlet.java" name="UpdateProductServlet.java" references="false" stamp="1572569717894" version="1.0"/>
+</session>

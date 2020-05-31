@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class examAverage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner keyboard =  new Scanner(System.in);
+		
+		String answer = "";
+do {
+		
+	int numExams = 0;  //total number of exams entered
+	int examTotal = 0;
+	
+	System.out.println("Enter exam scores to average - enter -1 when finished.");
+	
+	int examScore = keyboard.nextInt();
+	
+	while(examScore >= 0)
+	{
+		//count the number of exam scores
+		++numExams;
+		//sum the exam scores
+		examTotal = examTotal + examScore;
+		examScore = keyboard.nextInt();
+	}
+		//average
+	   double average = (double)examTotal / (double)numExams;
+	   
+	   System.out.println(average);
+	   
+	   System.out.println("Enter yes if you want to comput another average: ");
+	   
+	   answer = keyboard.next(); // yes, no, nope, bananas.....
+	}
+	   
+	  while (answer.equalsIgnoreCase("yes")); //yes, YEs, 
+	     //do it all again
+		
+	}
+
+}

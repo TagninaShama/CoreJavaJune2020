@@ -1,0 +1,22 @@
+public class StarbucksDemo {
+	public static void main(String[] args) {
+
+		StarbucksAccount joesAccount = new StarbucksAccount("Joe", "King", "98765432", 10.0);
+
+      //Test your code here with the above object and some of your own!
+      
+      
+      
+      joesAccount.generateUsername();
+      joesAccount.makePurchase(5.0);
+      
+      
+      /* //Uncomment for Step 9.
+      System.out.println("Please enter your option:");
+		System.out.println("\t1. Print Account Info");
+		System.out.println("\t2. Generate Username");
+		System.out.println("\t3. Deposit Funds");
+		System.out.println("\t4. Make Purchase");
+		*/
+	}
+}

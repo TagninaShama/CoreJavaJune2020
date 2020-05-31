@@ -1,0 +1,231 @@
+/* 
+* [GamePlay].java 
+* Authors: [Zachary Reynolds, April Okoukoni, Tagnina Shama] 
+* Submission Date:[10/20/2018] 
+* 
+* Purpose: This program is a text-based game that runs a game akin to the “Wheel of Fortune”.
+* The game has five phrases hard coded in and will be selected to be displayed to
+* the player, albeit with all characters that are alphabetic being converted to underscores 
+* so that the phrase is initially hidden to the player on the onset. The player then has to
+* choose from four options; “Buy a Vowel”, “Guess a Consonant”, “Solve the Puzzle”, and exit. 
+* The player starts off with 2000 dollars of in-game money and either win or lose money based
+* off the outcome of another random number generator choosing what space the player 
+* “lands on” on the “Wheel of Fortune”. The player, if they choose buy vowel will have money 
+* deducted from their overall account, which is stored within the program. If account of
+* in-game money goes below zero at any time, the game ends. The player at any time can guess 
+* the hidden phrase. If the player correctly answers the phrase they receive a prize in-game 
+* money. If they incorrectly guess the phrase they lose a set amount of in-game money. 
+* The game progresses until all five phrases are solved, the player runs out of in-game funds,
+* or they decide to exit the game. 
+* 
+* Statement of Academic Honesty:
+* 
+* The following code represents my own work. I have neither 
+* received nor given inappropriate assistance. I have not copied 
+* or modified code from any source other than the course webpage 
+* or the course textbook. I recognize that any unauthorized
+ * assistance or plagiarism will be handled in accordance with 
+* the University of Georgia's Academic Honesty Policy and the 
+* policies of this course. Any publishing 
+* of source code for this project is strictly prohibited without 
+* written consent from the MIS Department. */
+
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Random;
+
+public class GamePlay {
+
+	Scanner keyboard = new Scanner(System.in);
+	Random ranGen = new Random();
+	int bank = 2000;
+	int countConsonants = 0;
+	int amount;
+	String standInConsonant;
+	ArrayList<Character> guessedLetters = new ArrayList<Character>();
+
+	//Converts wheelPhrases into a masked phrase of underscores 
+	public String hiddenPhrase(String phrase) {
+		String hiddenPhrase = "";
+		for (int i = 0; i < phrase.length(); ++i) {
+
+			if (Character.isAlphabetic(phrase.charAt(i))) {
+				hiddenPhrase += "_";
+			} else if (Character.isWhitespace(phrase.charAt(i))) {
+				hiddenPhrase += " ";
+			} else {
+				hiddenPhrase += phrase.charAt(i);
+			}
+		}
+		return hiddenPhrase;
+	}
+	// Paired with the isVowel method to check if input is a vowel and changes hidden phrase 
+	public String buyVowel(String guessPhrase, char vowel, String hiddenPhrase) {
+		if (guessedLetters.contains(vowel)) {
+			System.out.println("Sorry you've already guessed that letter.");
+			return hiddenPhrase;
+		}
+		if (!isVowel(vowel)) {
+			System.out.println("You've picked a letter that is not a vowel.");
+			return hiddenPhrase;
+		} else {
+			bank -= 250;
+			if(bank < 0) {
+				System.out.println("Sorry, you've run out of money and lost the game! Thank you for playing!");
+				System.exit(0);
+			}
+			else {
+			System.out.println("You now have $" + bank + "!");
+			guessedLetters.add(vowel);
+			for (int i = 0; i < guessPhrase.length(); i++) {
+				if (guessPhrase.charAt(i) == vowel) {
+					String firstHalf = hiddenPhrase.substring(0, i);
+					String secondHalf = hiddenPhrase.substring(i + 1);
+					hiddenPhrase = firstHalf + vowel + secondHalf;
+				}
+			} 
+		}}
+		return hiddenPhrase;
+	}
+
+	public boolean isVowel(char vowel) {
+		char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+		for (int i = 0; i < vowels.length; i++) {
+			if (vowels[i] == vowel) {
+				return true;
+			}
+		}
+		return false;
+	}
+	// Paired with the isConsonant method to check if input is a consonant and changes hidden phrase 
+	public String buyConsonant(String guessPhrase, char consonant, String hiddenPhrase) {
+		if (amount <=0) {
+			return hiddenPhrase;
+		}
+		else {
+		System.out.println("What consonant would you like to buy?");
+		standInConsonant=keyboard.next();
+		consonant= standInConsonant.charAt(0);
+		
+		if (guessedLetters.contains(consonant)) {
+			System.out.println("Sorry you've already guessed this letter.");
+			return hiddenPhrase;
+		}
+		
+		int countConsonants = 0;
+		if (!isConsonant(consonant)) {
+			
+		}
+		 else {
+			guessedLetters.add(consonant);
+			for (int i = 0; i < guessPhrase.length(); i++) {
+				if (guessPhrase.charAt(i) == consonant) {
+					String firstHalf = hiddenPhrase.substring(0, i);
+					String secondHalf = hiddenPhrase.substring(i + 1);
+					hiddenPhrase = firstHalf + consonant + secondHalf;
+					countConsonants++;}
+					}
+				}
+		 
+		bank += amount * countConsonants;
+		if(amount*countConsonants== 0) {
+			System.out.println("There are no " + consonant + "'s in the phrase!");
+		}
+		else {
+		System.out.println("You now have $" + bank + "!");
+		}
+		return hiddenPhrase;
+	}
+}
+	public boolean isConsonant(char letter) {
+		if (Character.isAlphabetic(letter) && !isVowel(letter)) {
+			return true;
+		} else {
+			System.out.println("Your guessed letter is not a consonant. Please try again!");
+			return false;
+		}
+	}
+
+	//Takes the wheelOptions String array and assigns one case to each option
+	// an amount will be returned to buyConsonants to be multiplied by number of consonants revealed
+	public int spinWheel(String wheelOptions) {
+		amount = 0;
+		System.out.println("The wheel is spinning...\n");
+		switch (wheelOptions) {
+		case "Bankrupt": {
+			System.out.println("You've landed on Bankrupt!!!");
+			bank -= 500;
+			if (bank <= 0) {
+				System.out.println("Sorry, you've run out of money and lost the game! Thank you for playing!");
+				System.exit(0);
+			} 
+			else {
+				System.out.println("Your current balance is now $" + bank + "!");
+				amount=-1;
+				return amount;
+			}
+			break;
+		}
+		case "50": {
+			System.out.println("You've landed on $50!");
+			amount = 50;
+			break;
+		}
+		case "100": {
+			System.out.println("You've landed on $100!");
+			amount = 100;
+			break;
+		}
+		case "200": {
+			System.out.println("You've landed on $200!");
+			amount = 200;
+			break;
+		}
+		case "300": {
+			System.out.println("You've landed on $300!");
+			amount = 300;
+			break;
+		}
+		case "400": {
+			System.out.println("You've landed on $400!");
+			amount = 400;
+			break;
+		}
+		case "500": {
+			System.out.println("You've landed on $500!");
+			amount = 500;
+			break;
+		}
+		}
+		return amount;
+	}
+
+	public boolean guessPhrase(String phrase, String hiddenPhrase) {
+
+		String guessPhrase = keyboard.nextLine();
+		if (guessPhrase.equalsIgnoreCase(phrase)) {
+			System.out.println("Good job! You've solved the puzzle!");
+			int remainingChar = 0;
+			for (int i = 0; i < hiddenPhrase.length(); i++) {
+				if (hiddenPhrase.charAt(i) == '_') {
+					remainingChar++;
+				}
+			}
+			bank += remainingChar * 200;
+			System.out.println("Congratulations!!! Your prize pot is $" + bank + "!!!\n");
+			return true;
+		} 
+		else {
+			System.out.println("You have guessed the phrase incorrectly!");
+			bank -= 1000;
+			if (bank <= 0) {
+				System.out.println("You have no money left! Thank you for playing THE WHEEL OF FORTUNE!\n");
+				System.exit(0);
+			} else {
+				System.out.println("You've lost $1000. You now have $" + bank + " left!\n");
+			}
+		}
+		return false;
+	}
+
+}

@@ -1,0 +1,14 @@
+
+public class practice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//System.out.println("The count is " + 2);
+		System.out.print("Hello ");
+				System.out.print("MIST 4600 ");
+				System.out.println("Students! ");
+
+
+	}
+
+}

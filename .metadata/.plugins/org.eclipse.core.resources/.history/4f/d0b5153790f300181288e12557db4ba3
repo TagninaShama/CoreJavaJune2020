@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class ElectronicsOnlineStore {
+
+	public static void main(String[] args) {
+
+	Map<String, Double> listOfItems= new HashMap<String, Double>();
+	listOfItems.put("Vacuum", 250.00);
+	listOfItems.put("Air fryer", 200.00);
+	listOfItems.put("Microwave", 50.00);
+	listOfItems.put("Toaster", 25.00);
+	listOfItems.put("Phone", 750.00);
+
+	//for(String newProduct: listOfItems.keySet()) {}
+	
+	}
+}

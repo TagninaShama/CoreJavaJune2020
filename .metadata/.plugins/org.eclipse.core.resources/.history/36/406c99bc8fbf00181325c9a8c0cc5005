@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class coinCalculte {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int quarter = 0;
+		int dime= 0;
+		int nickel = 0;
+		int penny = 0;
+		int numOfQuarters = 0;
+		int remainderOfQuarters = 0;
+		int numOfDime = 0;
+		int remainderOfDimes = 0;
+		int numOfNickels = 0;
+		int remainderOfNickels = 0;
+		int numOfPennies = 0;
+		
+		System.out.println("Enter a whole number from 1 to 99: ");
+		System.out.println("The machine wil determine a combination of coins.");
+		Scanner keyboard = new Scanner(System.in);
+		int userNum = keyboard.nextInt();
+		
+		System.out.println(userNum + " cents in coins:");
+		
+		numOfQuarters = userNum / 25;
+		System.out.println(numOfQuarters + " quarters");
+		
+		remainderOfQuarters = userNum % 25;
+		numOfDime = remainderOfQuarters/10;
+		System.out.println(numOfDime+ " dime");
+		
+		remainderOfDimes = remainderOfQuarters % 10; 
+		numOfNickels = remainderOfDimes / 5;
+		System.out.println(numOfNickels + " nickels");
+		
+		remainderOfNickels = remainderOfDimes % 5; 
+		numOfPennies = remainderOfNickels / 1;
+		System.out.println(numOfPennies + " pennies");
+		
+		
+		
+		
+		
+		
+	}
+
+}

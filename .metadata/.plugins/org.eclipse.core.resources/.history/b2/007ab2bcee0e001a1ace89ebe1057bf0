@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link href="style.css" type="text/css" rel="stylesheet">
+<title>AMC Theaters: Movies</title>
+</head>
+
+<body>
+<header>
+<h1><center>Welcome to AMC </center></h1>
+<nav>
+<ul>
+<li><a href="Movies.jsp">Movie</a></li>
+<li><a href="addAccountForm">Create an Account</a></li> 
+<li><a href="LogInForm">Log In </a></li> 
+<li><a href="cart.jsp">Cart icon</a></li>
+</ul>
+
+</nav>
+</header>
+
+<h2>Featured Movies</h2>
+
+</body>
+</html>

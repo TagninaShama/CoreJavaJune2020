@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class coinCalculte {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int quarter = 0;
+		int dime= 0;
+		int nickel = 0;
+		int penny = 0;
+		
+		System.out.println("Enter a number between 1 to 99: ");
+		Scanner keyboard = new Scanner(System.in);
+		int userNum = keyboard.nextInt();
+		
+	}
+
+}

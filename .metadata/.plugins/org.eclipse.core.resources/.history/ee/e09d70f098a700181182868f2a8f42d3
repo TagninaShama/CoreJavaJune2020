@@ -1,0 +1,31 @@
+package groceryStorePurchase;
+
+import java.util.Scanner;
+
+public class groceryStorePurchase {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scr = new Scanner (System.in);
+		
+		System.out.println("Welcome to my store!");
+		System.out.println("The menu is below:");
+		
+		double banana = 0.95 ;
+		double apple = 1.95;
+		double chips = 2.55;
+		double peach = 1.05;
+		double granola = 2.05;
+		
+		System.out.println("Bananas $" + banana);
+		System.out.println("Apples $" + apple);
+		System.out.println("Chips $" + chips);
+		System.out.println("Peaches $" + peach);
+		System.out.println("Granolas $" + granola);
+		
+		
+		
+
+	}
+
+}

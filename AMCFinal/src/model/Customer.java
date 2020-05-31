@@ -1,0 +1,119 @@
+package model;
+
+public class Customer {
+	
+	private int customerID;
+	/**
+	 * @return the customerID
+	 */
+	public int getCustomerID() {
+		return customerID;
+	}
+	/**
+	 * @param customerID the customerID to set
+	 */
+	public void setCustomerID() {
+		this.customerID = customerID;
+	}
+	public void setCustomerID(int customerID) {
+		this.customerID = customerID;
+	}
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName() {
+		return firstName;
+	}
+	/**
+	 * @param firstName the firstName to set
+	 */
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+	/**
+	 * @param lastName the lastName to set
+	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	/**
+	 * @return the email
+	 */
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+	/**
+	 * @return the password
+	 */
+	public String getPassword() {
+		return password;
+	}
+	/**
+	 * @param password the password to set
+	 */
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	/**
+	 * @return the customerPhoneNo
+	 */
+	public String getCustomerPhoneNo() {
+		return customerPhoneNo;
+	}
+	/**
+	 * @param customerPhoneNo the customerPhoneNo to set
+	 */
+	public void setCustomerPhoneNo(String customerPhoneNo) {
+		this.customerPhoneNo = customerPhoneNo;
+	}
+	/**
+	 * 
+	 */
+	public Customer() {
+	}
+	/**
+	 * @param customerID
+	 * @param firstName
+	 * @param lastName
+	 * @param email
+	 * @param password
+	 * @param customerPhoneNo
+	 */
+	public Customer(int customerID, String firstName, String lastName, String customerPhoneNo, String emailAddress, String password) {
+		this.customerID = customerID;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.emailAddress = emailAddress;
+		this.password = password;
+		this.customerPhoneNo = customerPhoneNo;
+	}
+	
+	
+	private String firstName;
+	private String lastName;
+	private String emailAddress;
+	private String password;
+	private String customerPhoneNo;
+	/**
+	 * @param firstName
+	 * @param lastName
+	 * @param emailAddress
+	 * @param password
+	 * @param customerPhoneNo
+	 */
+
+	
+
+}

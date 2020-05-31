@@ -1,0 +1,24 @@
+
+public class practice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//System.out.println("The count is " + 2);
+//System.out.print("Hello ");
+//System.out.print("MIST 4600 ");
+//System.out.println("Students! ");
+		int intVar1 = 10;
+		int intVar2 = 5;
+		byte byteVar1 = 5;
+		float floatVar1 = 200.00F;
+		double doubleVar1 = 0.1;
+		
+		System.out.println(byteVar1/intVar2-intVar1);
+		System.out.println((byteVar1*byteVar1) +(intVar2 * intVar2));
+		System.out.println((int) floatVar1 % byteVar1);
+		
+
+
+	}
+
+}

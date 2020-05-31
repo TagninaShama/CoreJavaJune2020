@@ -1,0 +1,16 @@
+INDEX VERSION 1.4+/Users/tagninashama/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+296566835.index
+443544751.index
+2602740487.index
+2127628139.index
+1422022344.index
+3191121183.index
+2064194670.index
+2169592034.index
+1110024176.index
+2874308143.index
+2186781813.index
+3253504349.index
+2679130991.index
+1026074314.index
+424702731.index

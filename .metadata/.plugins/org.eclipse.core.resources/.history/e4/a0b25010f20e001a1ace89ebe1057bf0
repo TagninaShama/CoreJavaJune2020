@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>AMC Movie Theater</h2>
+
+<div class="row">
+  
+<script>
+function Account() {
+  location.replace("CreateAccount.jsp")
+}
+function LogIn() {
+	  location.replace("LogInForm")
+	}
+</script>
+
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Create an Account</h2>
+    <text onclick="Account()"> Click here!</text>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>Log In </h2>
+    <text onclick="LogIn()"> Click here!</text>
+  </div>
+</div>
+
+</body>
+</html>
+

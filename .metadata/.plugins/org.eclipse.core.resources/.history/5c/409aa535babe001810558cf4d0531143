@@ -1,0 +1,75 @@
+
+public class Rectangle {
+
+
+ private double height;
+ private double width;
+ private double area; // h*w
+ private double perimeter; 
+
+//......methods 
+//constructor....dpesn't have a return type, have a method that matches 
+// public Rectangle(double ht, double w)
+// {
+//	 height = ht;
+//	 width = w;
+//	 setArea();
+// }
+ 
+//mutator for height
+
+public void setHeight(double ht)//double ht  = -22
+{
+	//set my height to ht when ht >0
+	
+	if (ht > 0) {	
+	height = ht; //-22.0
+	}
+	else 
+		System.out.println("Invalid height: " + ht);
+}
+//accessor height
+public double getHeight()
+{
+	return height;
+			
+}
+public void setWidth(double w)//double ht  = -22
+{
+	//set my height to ht when ht >0
+	
+	if (w > 0) {	
+	width = w; //-22.0
+	}
+	else 
+		System.out.println("Invalid width: " + w);
+}
+//accessor height
+public double getWidth()
+{
+	return width;
+			
+}
+
+public double getArea()
+{
+	return area;
+}
+public void setArea()
+{
+	area = height * width; 
+}
+//method to print height, width, area
+
+public void printInfo()
+{
+	System.out.println("Height: " + getHeight());
+
+	System.out.println("Width: " + getWidth());
+
+	System.out.println("Area: " + getArea());
+	//return_______
+}
+}
+
+

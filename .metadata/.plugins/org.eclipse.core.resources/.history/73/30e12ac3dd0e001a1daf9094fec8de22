@@ -1,0 +1,77 @@
+package model;
+
+public class movie {
+	
+	private String movieName;
+	private String runningTime;
+	private double rating;
+	private String releaseDate;
+	
+	
+	/**
+	 * 
+	 */
+	public movie() {
+	}
+	/**
+	 * @param movieName
+	 * @param runningTime
+	 * @param rating
+	 * @param releaseDate
+	 */
+	public movie(String movieName, String runningTime, double rating, String releaseDate) {
+		this.movieName = movieName;
+		this.runningTime = runningTime;
+		this.rating = rating;
+		this.releaseDate = releaseDate;
+	}
+	/**
+	 * @return the movieName
+	 */
+	public String getMovieName() {
+		return movieName;
+	}
+	/**
+	 * @param movieName the movieName to set
+	 */
+	public void setMovieName(String movieName) {
+		this.movieName = movieName;
+	}
+	/**
+	 * @return the runningTime
+	 */
+	public String getRunningTime() {
+		return runningTime;
+	}
+	/**
+	 * @param runningTime the runningTime to set
+	 */
+	public void setRunningTime(String runningTime) {
+		this.runningTime = runningTime;
+	}
+	/**
+	 * @return the rating
+	 */
+	public double getRating() {
+		return rating;
+	}
+	/**
+	 * @param rating the rating to set
+	 */
+	public void setRating(double rating) {
+		this.rating = rating;
+	}
+	/**
+	 * @return the releaseDate
+	 */
+	public String getReleaseDate() {
+		return releaseDate;
+	}
+	/**
+	 * @param releaseDate the releaseDate to set
+	 */
+	public void setReleaseDate(String releaseDate) {
+		this.releaseDate = releaseDate;
+	}
+
+}
