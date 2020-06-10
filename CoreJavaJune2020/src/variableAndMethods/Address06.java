@@ -27,5 +27,5 @@ public class Address06 { //Opening of Class body
 			//then a non static variable can't be 
 		
 	}//closing of class body 
-
+ //i am just adding this comment out
 } 
