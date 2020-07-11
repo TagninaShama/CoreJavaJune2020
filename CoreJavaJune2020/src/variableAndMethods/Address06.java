@@ -5,7 +5,8 @@ public class Address06 { //Opening of Class body
 
 	//no variable = declare
 	//initialize = with variable 
-		
+	
+	
 		public static String Name = "Shama"; 
 		public static int houseNumber = 625; 
 		public static char houseDirection = 'W'; 
